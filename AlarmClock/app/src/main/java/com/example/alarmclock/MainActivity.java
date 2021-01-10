@@ -47,6 +47,7 @@ public class MainActivity extends Activity {
         }, 0, 1000);
     }
 
+
     public String AlarmTime() {
         Integer alarmHours = alarmTime.getCurrentHour();
         Integer alarmMinutes  = alarmTime.getCurrentMinute();
@@ -62,10 +63,10 @@ public class MainActivity extends Activity {
         String stringAlarmTime = null;
         if(alarmHours > 12) {
             alarmHours = alarmHours - 12;
-            stringAlarmTime = alarmHours.toString().concat(":").concat(alarmMinutes.toString()).
+            stringAlarmTime = alarmHours.toString().concat(":").concat(stringAlarmMinutes).
                     concat(" PM");
         }else{
-            stringAlarmTime = alarmHours.toString().concat(":").concat(alarmMinutes.toString()).
+            stringAlarmTime = alarmHours.toString().concat(":").concat(stringAlarmMinutes).
                     concat(" AM");
         }
 
